@@ -3,9 +3,11 @@ import type { Metadata, Viewport } from 'next';
 import { Manrope } from 'next/font/google';
 import { UserProvider } from '@/lib/auth';
 import { getUser } from '@/lib/db/queries';
+import { ThemeProvider } from '@/components/layout/theme-provider';
+import { Navbar } from '@/components/layout/navbar';
 
 export const metadata: Metadata = {
-  title: 'Next.js SaaS Starter',
+  title: 'Dot Dasher',
   description: 'Get started quickly with Next.js, Postgres, and Stripe.',
 };
 
@@ -25,10 +27,20 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-white dark:bg-gray-950 text-black dark:text-white ${manrope.className}`}
+      className={`bg-background dark:bg-foreground text-foreground dark:text-background ${manrope.className}`}
     >
-      <body className="min-h-[100dvh] bg-gray-50">
-        <UserProvider userPromise={userPromise}>{children}</UserProvider>
+      <body className="min-h-[100dvh] bg-background">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <UserProvider userPromise={userPromise}>
+            <Navbar />
+            {children}
+          </UserProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
