@@ -11,7 +11,11 @@ export const Icon = ({
   size: number;
   className?: string;
 }) => {
-  const LucideIcon = LucideIcons[name];
+  const LucideIcon = LucideIcons[name] as React.ComponentType<{
+    color: string;
+    size: number;
+    className?: string;
+  }>;
 
   return <LucideIcon color={color} size={size} className={className} />;
 };
