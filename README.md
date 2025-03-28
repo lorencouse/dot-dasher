@@ -1,6 +1,7 @@
-# Next.js SaaS Starter
+# Dot Dasher
 
-This is a starter template for building a SaaS application using **Next.js** with support for authentication, Stripe integration for payments, and a dashboard for logged-in users.
+This is a full-stack application built with Next.js, Drizzle ORM, and Stripe. It serves as a boilerplate for creating SaaS applications with user authentication, subscription management, and a dashboard for managing users and teams.
+It includes a marketing landing page, a pricing page with Stripe Checkout integration, and a dashboard for managing users and teams. The application also implements basic role-based access control (RBAC) with Owner and Member roles, allowing for different levels of access to the dashboard features.
 
 ## Features
 

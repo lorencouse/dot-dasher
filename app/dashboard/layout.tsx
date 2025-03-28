@@ -22,23 +22,23 @@ export default function DashboardLayout({
   ];
 
   return (
-    <div className="flex flex-col min-h-[calc(100dvh-68px)] mx-auto w-full">
+    <div className='flex flex-col min-h-[calc(100dvh-68px)] mx-auto w-full mt-5'>
       {/* Mobile header */}
-      <div className="lg:hidden flex items-center justify-between bg-background border-b border-border p-4">
-        <div className="flex items-center">
-          <span className="font-medium">Settings</span>
+      <div className='lg:hidden flex items-center justify-between bg-background border-b border-border p-4'>
+        <div className='flex items-center'>
+          <span className='font-medium'>Settings</span>
         </div>
         <Button
-          className="-mr-3"
-          variant="ghost"
+          className='-mr-3'
+          variant='ghost'
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
         >
-          <Menu className="h-6 w-6" />
-          <span className="sr-only">Toggle sidebar</span>
+          <Menu className='h-6 w-6' />
+          <span className='sr-only'>Toggle sidebar</span>
         </Button>
       </div>
 
-      <div className="flex flex-1 overflow-hidden h-full">
+      <div className='flex flex-1 overflow-hidden h-full'>
         {/* Sidebar */}
         <aside
           className={`w-64 bg-background lg:bg-accent border-r border-border lg:block ${
@@ -47,19 +47,17 @@ export default function DashboardLayout({
             isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
-          <nav className="h-full overflow-y-auto p-4">
+          <nav className='h-full overflow-y-auto p-4 lg:mt-0 mt-18'>
             {navItems.map((item) => (
               <Link key={item.href} href={item.href} passHref>
                 <Button
-                  variant={
-                    pathname === item.href ? 'muted' : 'muted-foreground'
-                  }
+                  variant={pathname === item.href ? '' : 'ghost'}
                   className={`shadow-none my-1 w-full justify-start ${
                     pathname === item.href ? 'bg-muted-foreground' : ''
                   }`}
                   onClick={() => setIsSidebarOpen(false)}
                 >
-                  <item.icon className="mr-2 h-4 w-4" />
+                  <item.icon className='mr-2 h-4 w-4' />
                   {item.label}
                 </Button>
               </Link>
@@ -68,7 +66,7 @@ export default function DashboardLayout({
         </aside>
 
         {/* Main content */}
-        <main className="flex-1 overflow-y-auto p-0 lg:p-4">{children}</main>
+        <main className='flex-1 overflow-y-auto p-0 lg:p-4'>{children}</main>
       </div>
     </div>
   );

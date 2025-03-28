@@ -12,27 +12,27 @@ import { TeamSection } from '@/components/layout/sections/team';
 import { TestimonialSection } from '@/components/layout/sections/testimonial';
 
 export const metadata = {
-  title: 'Shadcn - Landing template',
-  description: 'Free Shadcn landing page for developers',
+  title: 'Dot Dasher - Web Dev Services',
+  description: 'Web development, marketing, and SEO services',
   openGraph: {
     type: 'website',
     url: 'https://github.com/nobruf/shadcn-landing-page.git',
-    title: 'Shadcn - Landing template',
-    description: 'Free Shadcn landing page for developers',
+    title: 'Dot Dasher- Web Dev Services',
+    description: 'Web development, marketing, and SEO services',
     images: [
       {
         url: 'https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/shadcn-vue.jpg',
         width: 1200,
         height: 630,
-        alt: 'Shadcn - Landing template',
+        alt: 'Dot Dasher - Web Dev Services',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    site: 'https://github.com/nobruf/shadcn-landing-page.git',
-    title: 'Shadcn - Landing template',
-    description: 'Free Shadcn landing page for developers',
+    site: 'https://www.dotdasher.com',
+    title: 'Dot Dasher - Web Dev Services',
+    description: 'Web development, marketing, and SEO services',
     images: [
       'https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/shadcn-vue.jpg',
     ],
