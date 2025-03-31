@@ -13,8 +13,8 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free NextJS Shadcn template.",
+    question: "What services do you provide?",
+    answer: "At Dot Dasher, we provide a wide range of web services including web design, development, SEO, and digital marketing.",
     value: "item-1",
   },
   {
